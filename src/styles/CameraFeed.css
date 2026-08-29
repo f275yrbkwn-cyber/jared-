@@ -1,0 +1,78 @@
+.camera-feed {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.status-badge.ready {
+  background: rgba(0, 255, 0, 0.2);
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  animation: glow 2s infinite;
+}
+
+.status-badge.loading {
+  background: rgba(255, 200, 0, 0.2);
+  color: #ffc800;
+  border: 1px solid #ffc800;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+  }
+}
+
+.camera-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  color: #ff6b6b;
+  text-align: center;
+  padding: 2rem;
+}
+
+.camera-error p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.camera-error small {
+  color: #aaa;
+  font-size: 0.9rem;
+}

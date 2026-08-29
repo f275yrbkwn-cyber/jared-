@@ -1,0 +1,171 @@
+.memory-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+.memory-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.memory-header h2 {
+  margin: 0;
+  color: #00d4ff;
+  font-size: 1.8rem;
+}
+
+.memory-header p {
+  margin: 0.5rem 0 0;
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.memory-form {
+  background: rgba(0, 212, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 212, 255, 0.2);
+}
+
+.memory-input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 212, 255, 0.2);
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.memory-input:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.memory-input::placeholder {
+  color: #666;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.btn-add {
+  flex: 1;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  color: #0a0e27;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-add:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.4);
+}
+
+.btn-add:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.success-message {
+  color: #00ff00;
+  font-weight: 600;
+  animation: fadeInOut 3s ease;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+}
+
+.memories-list {
+  background: rgba(0, 212, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 212, 255, 0.2);
+}
+
+.memories-list h3 {
+  margin: 0 0 1.5rem;
+  color: #00d4ff;
+  font-size: 1.2rem;
+}
+
+.empty-memories {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+}
+
+.empty-memories p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.empty-memories small {
+  font-size: 0.85rem;
+  color: #666;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.memories-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.memory-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border-left: 4px solid #00d4ff;
+  transition: all 0.3s ease;
+}
+
+.memory-item:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+}
+
+.memory-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 212, 255, 0.2);
+  border-radius: 50%;
+  color: #00d4ff;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.memory-item p {
+  margin: 0;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
